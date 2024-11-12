@@ -7,9 +7,9 @@ const SkillsComponent = () => {
   return (
     <div className="mb-16 rounded-xl p-8">
       <h2 className="text-3xl font-bold text-center mb-12" data-aos="fade-in">Tecnologías y Herramientas</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-12" data-aos="fade-in">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12" data-aos="fade-in">
         {/* Frontend */}
-        <div className="text-center" >
+        <div className="text-center">
           <h3 className="text-xl text-purple-400 font-semibold mb-6">Frontend</h3>
           <div className="grid grid-cols-2 gap-6">
             <div className="flex flex-col items-center">
@@ -55,7 +55,7 @@ const SkillsComponent = () => {
         </div>
 
         {/* Database & Styling */}
-        <div className="text-center">
+        <div className="text-center sm:col-span-2 md:col-span-1 mx-auto w-full max-w-md">
           <h3 className="text-xl text-purple-400 font-semibold mb-6">Database & UI</h3>
           <div className="grid grid-cols-2 gap-6">
             <div className="flex flex-col items-center">
