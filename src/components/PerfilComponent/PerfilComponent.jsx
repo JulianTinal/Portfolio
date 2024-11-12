@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, Mail, Download } from 'lucide-react';
 import profile from '/public/images/cv.jpg';
+import cv from '/public/micv.pdf';
 
 const PerfilComponent = () => {
   return (
@@ -50,7 +51,7 @@ const PerfilComponent = () => {
         </p>
         <div className="flex justify-center font-bold">
           <a 
-            href="/public/micv.pdf" 
+            href={cv} 
             download 
             className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 px-4 py-2 rounded-md transition-colors"
           >
