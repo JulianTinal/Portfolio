@@ -23,12 +23,12 @@ const ProyectosComponent = () => {
   ];
 
   return (
-    <section className="py-16 ">
-      <div className="max-w-7xl  mx-auto px-4">
+    <section className="py-16">
+      <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-white mb-16 relative">
-          <span className="relative inline-block" data-aos="fade-in" >
+          <span className="relative inline-block" data-aos="fade-in">
             Mis Proyectos
-            <span className="absolute bottom-0 left-0 w-full h-1 "></span>
+            <span className="absolute bottom-0 left-0 w-full h-1"></span>
           </span>
         </h2>
         
@@ -57,24 +57,28 @@ const ProyectosComponent = () => {
               </div>
               
               <div className="p-8">
-                <div className="flex justify-between items-start mb-6">
+                {/* Contenedor principal con dirección de columna en móvil */}
+                <div className="flex flex-col space-y-4">
                   <h3 className="text-3xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <div className="flex gap-3 flex-wrap justify-end">
+                  
+                  {/* Contenedor de iconos con grid fijo */}
+                  <div className="grid grid-cols-5 gap-4 w-full">
                     {project.icons.map((Icon, idx) => (
-                      <Icon 
-                        key={idx} 
-                        className="text-purple-300 hover:text-purple-400 transform hover:scale-110 transition-all duration-300" 
-                        size={28} 
-                      />
+                      <div key={idx} className="flex justify-center items-center">
+                        <Icon 
+                          className="text-purple-300 hover:text-purple-400 transform hover:scale-110 transition-all duration-300" 
+                          size={28}
+                        />
+                      </div>
                     ))}
                   </div>
+                  
+                  <p className="text-gray-300 leading-relaxed">
+                    {project.description}
+                  </p>
                 </div>
-                
-                <p className="text-gray-300 leading-relaxed -mt-5">
-                  {project.description}
-                </p>
               </div>
             </div>
           ))}
