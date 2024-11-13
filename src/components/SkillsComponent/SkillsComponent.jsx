@@ -6,6 +6,8 @@ import { TbApi } from 'react-icons/tb';
 const SkillsComponent = () => {
   return (
     <div className="mb-16 rounded-xl p-8">
+      <br />
+      <br />
       <h2 className="text-3xl font-bold text-center mb-12" data-aos="fade-in">Tecnologías y Herramientas</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12" data-aos="fade-in">
         {/* Frontend */}
