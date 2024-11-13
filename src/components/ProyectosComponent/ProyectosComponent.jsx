@@ -38,6 +38,7 @@ const ProyectosComponent = () => {
               key={index}
               className="group relative bg-gradient-to-br from-purple-900/40 to-black border border-purple-500/20 rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-500/20 transition-all duration-500"
             >
+              {/* Contenedor de imagen */}
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={project.image}
@@ -56,28 +57,38 @@ const ProyectosComponent = () => {
                 </div>
               </div>
               
-              <div className="p-8">
-                {/* Contenedor principal con dirección de columna en móvil */}
-                <div className="flex flex-col space-y-4">
-                  <h3 className="text-3xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  
-                  {/* Contenedor de iconos con grid fijo */}
-                  <div className="grid grid-cols-5 gap-4 w-full">
-                    {project.icons.map((Icon, idx) => (
-                      <div key={idx} className="flex justify-center items-center">
-                        <Icon 
-                          className="text-purple-300 hover:text-purple-400 transform hover:scale-110 transition-all duration-300" 
-                          size={28}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <p className="text-gray-300 leading-relaxed">
-                    {project.description}
-                  </p>
+              <div className="p-6">
+                {/* Título */}
+                <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300 mb-4">
+                  {project.title}
+                </h3>
+                
+                {/* Descripción */}
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  {project.description}
+                </p>
+
+                {/* Separador */}
+                <div className="w-full h-px bg-purple-500/20 mb-6"></div>
+
+                {/* Tecnologías - Título */}
+                <h4 className="text-sm uppercase tracking-wider text-purple-400 mb-3">
+                  Tecnologías utilizadas
+                </h4>
+
+                {/* Contenedor de iconos */}
+                <div className="flex flex-wrap gap-4">
+                  {project.icons.map((Icon, idx) => (
+                    <div 
+                      key={idx} 
+                      className="bg-purple-900/30 p-2 rounded-lg hover:bg-purple-900/50 transition-all duration-300"
+                    >
+                      <Icon 
+                        className="text-purple-300 hover:text-purple-400 transition-colors duration-300" 
+                        size={24}
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
