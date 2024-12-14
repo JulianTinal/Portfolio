@@ -1,6 +1,7 @@
 import React from 'react';
 import tripea from '/public/images/tripea.jpg';
 import egu from '/public/images/egu.jpg';
+import wikidragon from '/public/images/wiki-dragon.png';
 import { FaReact, FaHtml5, FaCss3Alt, FaPhp, FaNodeJs, FaLaravel, FaVuejs, FaBootstrap } from 'react-icons/fa';
 import { SiTailwindcss, SiMongodb, SiMysql, SiJavascript, SiApachekafka, SiRedux } from 'react-icons/si';
 
@@ -19,6 +20,14 @@ const ProyectosComponent = () => {
       link: "https://pwa-egu-merch.netlify.app/", 
       image: egu,
       icons: [FaReact, SiMysql, FaNodeJs, SiJavascript, SiTailwindcss]
+    },
+
+    { 
+      title: "WIKI DRAGON",
+      description: "Wiki Dragon es una plataforma en línea diseñada para que los fanáticos de Dragon Ball puedan explorar y descubrir diferentes personajes dentro de sus respectivas sagas. Utiliza la API proporcionada por Dragon Ball API para obtener información detallada y actualizada. Si eres un apasionado de Dragon Ball, ¡esta página web te encantará!", 
+      link: "https://wiki-dragon.netlify.app/", 
+      image: wikidragon,
+      icons: [FaReact,  SiJavascript, SiTailwindcss]
     } 
   ];
 
