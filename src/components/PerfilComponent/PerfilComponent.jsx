@@ -47,7 +47,7 @@ const PerfilComponent = () => {
         <h1 className="text-4xl font-bold mt-5 mb-2">JULIAN GABRIEL VARGUEZ TINAL</h1>
         <p className="text-xl text-purple-400 mb-2">DESARROLLADOR FULL STACK</p>
         <p className="text-gray-300 mb-4 max-w-prose mx-auto">
-          Soy una persona responsable, comprometida con lo que hago. Me gusta el diseño, por lo que disfruto tanto el área de programación backend como frontend. Me encanta aprender cosas nuevas, soy muy sociable y trabajo muy bien en equipo.
+        Soy una persona responsable, comprometido con lo que hago. Me gusta el diseño, por lo que disfruto tanto el área de programación backend como frontend. Me encanta aprender cosas nuevas, soy muy sociable y trabajo muy bien en equipo.
         </p>
         <div className="flex justify-center font-bold">
           <a 

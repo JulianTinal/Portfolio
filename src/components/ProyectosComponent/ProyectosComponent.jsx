@@ -21,7 +21,6 @@ const ProyectosComponent = () => {
       image: egu,
       icons: [FaReact, SiMysql, FaNodeJs, SiJavascript, SiTailwindcss]
     },
-
     { 
       title: "WIKI DRAGON",
       description: "Wiki Dragon es una plataforma en línea diseñada para que los fanáticos de Dragon Ball puedan explorar y descubrir diferentes personajes dentro de sus respectivas sagas. Utiliza la API proporcionada por Dragon Ball API para obtener información detallada y actualizada. Si eres un apasionado de Dragon Ball, ¡esta página web te encantará!", 
@@ -47,7 +46,6 @@ const ProyectosComponent = () => {
               key={index}
               className="group relative bg-gradient-to-br from-purple-900/40 to-black border border-purple-500/20 rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-500/20 transition-all duration-500"
             >
-              {/* Contenedor de imagen */}
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={project.image}
@@ -67,25 +65,20 @@ const ProyectosComponent = () => {
               </div>
               
               <div className="p-6">
-                {/* Título */}
                 <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300 mb-4">
                   {project.title}
                 </h3>
                 
-                {/* Descripción */}
-                <p className="text-gray-300 leading-relaxed mb-6">
+                <p className="text-gray-300 leading-relaxed mb-6 hidden md:block">
                   {project.description}
                 </p>
 
-                {/* Separador */}
                 <div className="w-full h-px bg-purple-500/20 mb-6"></div>
 
-                {/* Tecnologías - Título */}
                 <h4 className="text-sm uppercase tracking-wider text-purple-400 mb-3">
                   Tecnologías utilizadas
                 </h4>
 
-                {/* Contenedor de iconos */}
                 <div className="flex flex-wrap gap-4">
                   {project.icons.map((Icon, idx) => (
                     <div 
