@@ -2,18 +2,19 @@ import React from 'react';
 import tripea from '/public/images/tripea.jpg';
 import egu from '/public/images/egu.jpg';
 import wikidragon from '/public/images/wiki-dragon.png';
+import XOPXOP from '/public/images/XOPXOP.jpg';
 import { FaReact, FaHtml5, FaCss3Alt, FaPhp, FaNodeJs, FaLaravel, FaVuejs, FaBootstrap } from 'react-icons/fa';
 import { SiTailwindcss, SiMongodb, SiMysql, SiJavascript, SiApachekafka, SiRedux } from 'react-icons/si';
 
 const ProyectosComponent = () => {
   const projects = [ 
     { 
-      title: "TRIPEA", 
-      description: "Desarrollo de una web dinámica para un cliente llamado Tripea, una agencia de viajes. Se implementó un diseño atractivo, un panel de administración y rutas protegidas. Además, se integró un sistema de traducción de la web de español a inglés para usuarios de habla inglesa.",
-      link: "http://tripea-project.atwebpages.com/home", 
-      image: tripea,
-      icons: [FaLaravel, SiMysql, FaPhp, FaVuejs, FaBootstrap]
-    }, 
+      title: "XOPXOP",
+      description: "Desarrollo de una plataforma web de servicios de delivery, similar a Didi Food, con un diseño atractivo y amigable para los usuarios. Incluye un panel de administración con rutas protegidas y un sistema de gestión de servicios con actualizaciones en tiempo real.", 
+      link: "https://xopxop.netlify.app/", 
+      image: XOPXOP,
+      icons: [FaReact, SiMysql, FaNodeJs, SiJavascript, SiTailwindcss]
+    },
     { 
       title: "EGU-MERCH",
       description: "Desarrollo de una Progressive Web App (PWA) para una tienda de playeras con diseños de anime, que incluye un sistema de pago integrado y diversas funciones adicionales. La aplicación ofrece una interfaz amigable para el usuario, garantizando una experiencia de compra sencilla y agradable.", 
@@ -22,12 +23,20 @@ const ProyectosComponent = () => {
       icons: [FaReact, SiMysql, FaNodeJs, SiJavascript, SiTailwindcss]
     },
     { 
+      title: "TRIPEA", 
+      description: "Desarrollo de una web dinámica para un cliente llamado Tripea, una agencia de viajes. Se implementó un diseño atractivo, un panel de administración y rutas protegidas. Además, se integró un sistema de traducción de la web de español a inglés para usuarios de habla inglesa.",
+      link: "http://tripea-project.atwebpages.com/home", 
+      image: tripea,
+      icons: [FaLaravel, SiMysql, FaPhp, FaVuejs, FaBootstrap]
+    },
+    { 
       title: "WIKI DRAGON",
       description: "Wiki Dragon es una plataforma en línea diseñada para que los fanáticos de Dragon Ball puedan explorar y descubrir diferentes personajes dentro de sus respectivas sagas. Utiliza la API proporcionada por Dragon Ball API para obtener información detallada y actualizada. Si eres un apasionado de Dragon Ball, ¡esta página web te encantará!", 
       link: "https://wiki-dragon.netlify.app/", 
       image: wikidragon,
       icons: [FaReact,  SiJavascript, SiTailwindcss]
     } 
+    
   ];
 
   return (
