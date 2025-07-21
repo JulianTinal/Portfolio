@@ -2,6 +2,7 @@ import React from 'react';
 import PerfilComponent from '../../components/PerfilComponent/PerfilComponent';
 import SkillsComponent from '../../components/SkillsComponent/SkillsComponent';
 import ProyectosComponent from '../../components/ProyectosComponent/ProyectosComponent';
+import ProyectosDiseñoComponent from '../../components/ProyectosDiseñoComponent/ProyectosDiseñoComponent';
 
 const ContenidoComponent = () => {
   return (
@@ -16,6 +17,9 @@ const ContenidoComponent = () => {
       <br />
       <section id='projects'>
       <ProyectosComponent />
+      </section>
+      <section id='diseño'>
+      <ProyectosDiseñoComponent />
       </section>
     </div>
   );

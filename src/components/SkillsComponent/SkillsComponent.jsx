@@ -5,10 +5,15 @@ import { TbApi } from 'react-icons/tb';
 
 const SkillsComponent = () => {
   return (
-    <div className="mb-16 rounded-xl p-8">
+    <div className="mb-16 text-center rounded-xl p-8">
       <br />
       <br />
-      <h2 className="text-3xl font-bold text-center mb-12" data-aos="fade-in">Tecnologías y Herramientas</h2>
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 md:mb-8 tracking-tight px-4 ">
+              <span className="block">Tecnologías y</span>
+              <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
+                Herramientas
+              </span>
+            </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12" data-aos="fade-in">
         {/* Frontend */}
         <div className="text-center">

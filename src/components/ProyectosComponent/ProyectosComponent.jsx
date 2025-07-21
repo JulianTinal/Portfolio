@@ -10,44 +10,39 @@ const ProyectosComponent = () => {
   const projects = [ 
     { 
       title: "XOPXOP",
-      description: "Desarrollo de una plataforma web de servicios de delivery, similar a Didi Food, con un diseño atractivo y amigable para los usuarios. Incluye un panel de administración con rutas protegidas y un sistema de gestión de servicios con actualizaciones en tiempo real.", 
       link: "https://xopxop.netlify.app/", 
       image: XOPXOP,
       icons: [FaReact, SiMysql, FaNodeJs, SiJavascript, SiTailwindcss]
     },
     { 
       title: "EGU-MERCH",
-      description: "Desarrollo de una Progressive Web App (PWA) para una tienda de playeras con diseños de anime, que incluye un sistema de pago integrado y diversas funciones adicionales. La aplicación ofrece una interfaz amigable para el usuario, garantizando una experiencia de compra sencilla y agradable.", 
       link: "https://pwa-egu-merch.netlify.app/", 
       image: egu,
       icons: [FaReact, SiMysql, FaNodeJs, SiJavascript, SiTailwindcss]
     },
     { 
       title: "TRIPEA", 
-      description: "Desarrollo de una web dinámica para un cliente llamado Tripea, una agencia de viajes. Se implementó un diseño atractivo, un panel de administración y rutas protegidas. Además, se integró un sistema de traducción de la web de español a inglés para usuarios de habla inglesa.",
       link: "http://tripea-project.atwebpages.com/home", 
       image: tripea,
       icons: [FaLaravel, SiMysql, FaPhp, FaVuejs, FaBootstrap]
     },
     { 
       title: "WIKI DRAGON",
-      description: "Wiki Dragon es una plataforma en línea diseñada para que los fanáticos de Dragon Ball puedan explorar y descubrir diferentes personajes dentro de sus respectivas sagas. Utiliza la API proporcionada por Dragon Ball API para obtener información detallada y actualizada. Si eres un apasionado de Dragon Ball, ¡esta página web te encantará!", 
       link: "https://wiki-dragon.netlify.app/", 
       image: wikidragon,
-      icons: [FaReact,  SiJavascript, SiTailwindcss]
+      icons: [FaReact, SiJavascript, SiTailwindcss]
     } 
-    
   ];
 
   return (
     <section className="py-16">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-white mb-16 relative">
-          <span className="relative inline-block" data-aos="fade-in">
-            Mis Proyectos
-            <span className="absolute bottom-0 left-0 w-full h-1"></span>
-          </span>
-        </h2>
+      <div className="max-w-7xl text-center mx-auto px-4">
+       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 md:mb-8 tracking-tight px-4 ">
+              <span className="block">Mis</span>
+              <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
+                Proyectos
+              </span>
+            </h1>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16" data-aos="fade-in">
           {projects.map((project, index) => (
@@ -77,10 +72,6 @@ const ProyectosComponent = () => {
                 <h3 className="text-2xl md:text-3xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300 mb-4">
                   {project.title}
                 </h3>
-                
-                <p className="text-gray-300 leading-relaxed mb-6 hidden md:block">
-                  {project.description}
-                </p>
 
                 <div className="w-full h-px bg-purple-500/20 mb-6"></div>
 

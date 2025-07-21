@@ -1,61 +1,103 @@
-import React from 'react';
-import { Github, Linkedin, Mail, Download } from 'lucide-react';
-import profile from '/public/images/cv.jpg';
-import cv from '/public/micv.pdf';
+import React, { useEffect, useState } from 'react';
+import { Github, Linkedin, Mail, Download, Facebook, ChevronDown } from 'lucide-react';
 
 const PerfilComponent = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const socialLinks = [
+    { href: "https://github.com/JulianTinal", icon: Github, label: "GitHub" },
+    { href: "https://www.linkedin.com/in/julian-tinal-272692321/", icon: Linkedin, label: "LinkedIn" },
+    { href: "https://www.facebook.com/profile.php?id=100063557323309", icon: Facebook, label: "Facebook" },
+    { href: "mailto:julian.tinal.15tvsec@gmail.com", icon: Mail, label: "Email" }
+  ];
+
   return (
-    <div className="max-w-6xl mx-auto py-8 px-4 text-white">
-      <div className="text-center md:text-left" data-aos="fade-in">
-        <div className="w-48 h-48 md:w-64 md:h-64 mx-auto mb-2 relative">
-          <img 
-            src={profile}
-            alt="Foto de perfil"
-            className="rounded-full w-full h-full object-cover border-4 border-purple-500"
-          />
-          <div className="flex gap-3 md:gap-4 justify-center md:justify-center mt-4">
-            <a 
-              href="https://github.com/JulianTinal" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="rounded-full w-10 h-10 md:w-12 md:h-12 bg-purple-500 hover:bg-purple-600 flex items-center justify-center transition-colors"
-            >
-              <Github className="h-5 w-5 md:h-6 md:w-6" />
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/julian-tinal-272692321/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="rounded-full w-10 h-10 md:w-12 md:h-12 bg-purple-500 hover:bg-purple-600 flex items-center justify-center transition-colors"
-            >
-              <Linkedin className="h-5 w-5 md:h-6 md:w-6" />
-            </a>
-            <a 
-              href="mailto:julian.tinal.15tvsec@gmail.com" 
-              className="rounded-full w-10 h-10 md:w-12 md:h-12 bg-purple-500 hover:bg-purple-600 flex items-center justify-center transition-colors"
-            >
-              <Mail className="h-5 w-5 md:h-6 md:w-6" />
-            </a>
-          </div>
-        </div>
+    <div className="min-h-screen -mt-10 w-full flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
+      {/* Efectos de fondo */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-pink-600/10 rounded-full blur-3xl"></div>
       </div>
-      <br />
-      <br />
-      <div className="mt-8 md:mt-20 text-center" data-aos="fade-in">
-        <h1 className="text-2xl md:text-4xl font-bold mb-2">JULIAN GABRIEL VARGUEZ TINAL</h1>
-        <p className="text-lg md:text-xl text-purple-400 mb-2">DESARROLLADOR FULL STACK</p>
-        <p className="text-sm md:text-base text-gray-300 mb-4 max-w-prose mx-auto px-4 md:px-0">
-          Soy una persona responsable, comprometido con lo que hago. Me gusta el diseño, por lo que disfruto tanto el área de programación backend como frontend. Me encanta aprender cosas nuevas, soy muy sociable y trabajo muy bien en equipo.
-        </p>
-        <div className="flex justify-center font-bold">
-          <a 
-            href={cv} 
-            download 
-            className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 px-4 py-2 rounded-md transition-colors text-sm md:text-base"
-          >
-            <Download size={20} />
-            Descargar CV
-          </a>
+
+      <div className={`relative w-full max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0 translate-y-10'}`}>
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24">
+          
+          {/* Sección de imagen circular */}
+          <div className="relative group w-full max-w-xs lg:max-w-md">
+            <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-2xl opacity-70 group-hover:opacity-90 transition-opacity duration-500"></div>
+            
+            {/* Contenedor circular */}
+            <div className="relative overflow-hidden rounded-full border-4 border-purple-500/30 shadow-2xl w-full aspect-square">
+              <img 
+                src="/public/images/cv.jpg"
+                alt="Julian Gabriel Varguez Tinal"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+
+            {/* Redes sociales */}
+            <div className="flex justify-center gap-4 mt-8">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 hover:bg-purple-600/40 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20"
+                  >
+                    <Icon size={24} className="text-white" />
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Sección de contenido */}
+          <div className="w-full max-w-2xl text-center lg:text-left">
+            {/* Título con efecto de gradiente */}
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-4 leading-tight">
+              <span className="block">JULIAN GABRIEL</span>
+              <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-purple-600 bg-clip-text text-transparent">
+                VARGUEZ TINAL
+              </span>
+            </h1>
+
+            {/* Subtítulo */}
+            <div className="my-6">
+              <span className="inline-block text-2xl sm:text-3xl text-purple-400 font-mono font-bold py-2 px-6 rounded-full bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30">
+                DESARROLLADOR FULL STACK
+              </span>
+            </div>
+
+            {/* Descripción */}
+            <p className="text-xl sm:text-2xl text-gray-300 leading-relaxed mb-10">
+  Soy una persona responsable, comprometido con lo que hago. Me gusta el diseño, por lo que disfruto tanto el área de programación 
+  <span className="text-purple-400 font-medium"> backend</span> como 
+  <span className="text-pink-400 font-medium"> frontend</span>. 
+  Me encanta aprender cosas nuevas, soy muy sociable y trabajo muy bien en equipo.
+</p>
+
+            {/* Botones */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+              <a 
+                href="/public/micv.pdf"
+                download="Julian_Varguez_CV.pdf"
+                className="flex items-center justify-center gap-3 bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-xl text-xl font-bold text-white hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105"
+              >
+                <Download size={24} />
+                DESCARGAR CV
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

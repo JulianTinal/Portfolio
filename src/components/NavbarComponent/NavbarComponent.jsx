@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaHome, FaUser, FaTools, FaProjectDiagram, FaEnvelope ,FaWhatsapp } from 'react-icons/fa';
+import { FaHome, FaUser, FaTools, FaProjectDiagram, FaEnvelope ,FaWhatsapp, FaPaintBrush  } from 'react-icons/fa';
 
 const NavbarComponent = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -18,6 +18,7 @@ const NavbarComponent = () => {
     { id: 'about', icon: FaUser, text: 'Sobre Mi', href: '#about' },
     { id: 'skills', icon: FaTools, text: 'Habilidades', href: '#skills' },
     { id: 'projects', icon: FaProjectDiagram, text: 'Proyectos', href: '#projects' },
+    { id: 'diseño', icon: FaPaintBrush , text: 'Diseño', href: '#diseño' },
     { id: 'contact', icon: FaWhatsapp, text: 'Contacto', href: whatsappUrl, isExternal: true }
   ];
 
