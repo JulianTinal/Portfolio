@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Github, Linkedin, Mail, Download, Facebook, ChevronDown } from 'lucide-react';
-
+import profile from '/public/images/cv.jpg';
+import cv from '/public/micv.pdf';
 const PerfilComponent = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -36,7 +37,7 @@ const PerfilComponent = () => {
             {/* Contenedor circular */}
             <div className="relative overflow-hidden rounded-full border-4 border-purple-500/30 shadow-2xl w-full aspect-square">
               <img 
-                src="/public/images/cv.jpg"
+                src={profile}
                 alt="Julian Gabriel Varguez Tinal"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -89,7 +90,7 @@ const PerfilComponent = () => {
             {/* Botones */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
               <a 
-                href="/public/micv.pdf"
+                href= {cv}
                 download="Julian_Varguez_CV.pdf"
                 className="flex items-center justify-center gap-3 bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-xl text-xl font-bold text-white hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105"
               >
