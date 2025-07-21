@@ -431,11 +431,7 @@ id: 1,
                   alt={selectedProject.title}
                   className="w-full h-64 md:h-80 lg:h-full object-cover"
                 />
-                <div className="absolute top-4 md:top-6 left-4 md:left-6">
-                  <span className="px-3 md:px-4 py-2 bg-purple-600/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-purple-300 text-xs md:text-sm font-medium">
-                    {selectedProject.category}
-                  </span>
-                </div>
+               
               </div>
 
               {/* Content Section */}
