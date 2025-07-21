@@ -173,7 +173,7 @@ id: 1,
   };
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
+    <div className="min-h-screen  relative overflow-hidden">
       {/* Elementos decorativos de fondo */}
 
       <div className="relative z-10 py-8 md:py-20 px-4">
